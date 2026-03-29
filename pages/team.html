@@ -8,21 +8,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
 <style>
-.team-cards{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.t-card{background:var(--bg2);border:1px solid rgba(255,255,255,.04);border-radius:24px;padding:52px 40px;text-align:center;transition:all .5s;position:relative;overflow:hidden}
+.team-cards{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}
+.t-card{background:var(--bg2);border:1px solid rgba(255,255,255,.04);border-radius:24px;padding:48px 32px;text-align:center;transition:all .5s;position:relative;overflow:hidden}
 .t-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:24px 24px 0 0}
 .t-card:nth-child(1)::before{background:var(--gradient)}
 .t-card:nth-child(2)::before{background:linear-gradient(135deg,var(--teal),#4ea8ff)}
+.t-card:nth-child(3)::before{background:linear-gradient(135deg,#a78bfa,#ec4899)}
 .t-card:hover{border-color:rgba(247,147,26,.15);transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.3)}
-.t-avatar{width:100px;height:100px;border-radius:50%;margin:0 auto 24px;display:flex;align-items:center;justify-content:center;font-family:'Syne';font-weight:800;font-size:36px;color:var(--bg)}
+.t-avatar{width:100px;height:100px;border-radius:50%;margin:0 auto 24px;display:flex;align-items:center;justify-content:center;font-family:'Syne';font-weight:800;font-size:32px;color:var(--bg)}
 .t-card:nth-child(1) .t-avatar{background:var(--gradient)}
 .t-card:nth-child(2) .t-avatar{background:linear-gradient(135deg,var(--teal),#4ea8ff)}
-.t-card h3{font-family:'Syne';font-weight:700;font-size:24px;margin-bottom:6px}
-.t-card .role{font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:20px}
-.t-card p{font-size:15px;color:var(--gray);line-height:1.7;margin-bottom:24px}
-.t-skills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-.t-skills span{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:6px 14px;border-radius:50px;border:1px solid rgba(255,255,255,.08);color:var(--gray);transition:all .3s}
+.t-card:nth-child(3) .t-avatar{background:linear-gradient(135deg,#a78bfa,#ec4899)}
+.t-card h3{font-family:'Syne';font-weight:700;font-size:22px;margin-bottom:6px}
+.t-card .role{font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:18px}
+.t-card p{font-size:14px;color:var(--gray);line-height:1.7;margin-bottom:20px}
+.t-skills{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:20px}
+.t-skills span{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:5px 12px;border-radius:50px;border:1px solid rgba(255,255,255,.08);color:var(--gray);transition:all .3s}
 .t-card:hover .t-skills span{border-color:rgba(247,147,26,.2);color:var(--white)}
+.t-linkedin{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--gray);border:1px solid rgba(255,255,255,.08);border-radius:50px;padding:8px 20px;transition:all .3s}
+.t-linkedin:hover{color:#0a66c2;border-color:#0a66c2;transform:translateY(-2px)}
 .values-section{background:var(--bg2)}
 .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto}
 .v-card{background:var(--bg);border:1px solid rgba(255,255,255,.04);border-radius:16px;padding:36px;text-align:center;transition:all .4s}
@@ -30,7 +34,8 @@
 .v-card .v-icon{font-size:36px;margin-bottom:14px}
 .v-card h3{font-family:'Syne';font-weight:700;font-size:18px;margin-bottom:10px}
 .v-card p{font-size:14px;color:var(--gray);line-height:1.6}
-@media(max-width:768px){.team-cards{grid-template-columns:1fr}.values-grid{grid-template-columns:1fr}}
+@media(max-width:1024px){.team-cards{grid-template-columns:1fr}}
+@media(max-width:768px){.values-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -66,14 +71,24 @@
       <h3>Talha Mahmood</h3>
       <div class="role">Director of Operations & Sales</div>
       <p>Leads all sales operations, location acquisition strategy, and partner relationships. Drives day-to-day business execution including outreach, negotiation, and client management across all markets.</p>
-      <div class="t-skills"><span>Sales Strategy</span><span>Location Acquisition</span><span>Partner Relations</span><span>Market Expansion</span><span>Operations</span></div>
+      <div class="t-skills"><span>Sales Strategy</span><span>Location Acquisition</span><span>Partner Relations</span><span>Operations</span></div>
+      <a href="#" target="_blank" class="t-linkedin card-hover">in &nbsp;LinkedIn</a>
     </div>
     <div class="t-card card-hover reveal reveal-delay-1">
       <div class="t-avatar">FA</div>
       <h3>Furqan Faheem Awan</h3>
       <div class="role">Founder & Principal</div>
       <p>US-based founder and owner of Imprint Logistics LLC. Oversees legal structure, banking operations, regulatory compliance, corporate governance, and strategic direction of the company.</p>
-      <div class="t-skills"><span>Legal & Compliance</span><span>Corporate Governance</span><span>Banking</span><span>Strategic Vision</span><span>US Operations</span></div>
+      <div class="t-skills"><span>Legal & Compliance</span><span>Corporate Governance</span><span>Banking</span><span>Strategic Vision</span></div>
+      <a href="#" target="_blank" class="t-linkedin card-hover">in &nbsp;LinkedIn</a>
+    </div>
+    <div class="t-card card-hover reveal reveal-delay-2">
+      <div class="t-avatar">RM</div>
+      <h3>Rafay Mahmood</h3>
+      <div class="role">Director of IT & Systems</div>
+      <p>Oversees all technology infrastructure, system integrations, and digital operations. Manages IT architecture, cybersecurity, and technical deployment across the company's BTM network.</p>
+      <div class="t-skills"><span>IT Infrastructure</span><span>Systems Integration</span><span>Cybersecurity</span><span>Tech Operations</span></div>
+      <a href="#" target="_blank" class="t-linkedin card-hover">in &nbsp;LinkedIn</a>
     </div>
   </div>
 </section>
