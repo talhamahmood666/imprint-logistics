@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imprint Logistics LLC — Bitcoin ATM Placement & Distribution</title>
+<meta name="description" content="Imprint Logistics LLC is an authorized Bitcoin Depot distributor specializing in Bitcoin ATM placement across North America. Earn passive income hosting a BTM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* HOME HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:140px 60px 100px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;width:100%;max-width:1400px;margin:0 auto;position:relative;z-index:2}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(247,147,26,.1);border:1px solid rgba(247,147,26,.25);border-radius:50px;padding:8px 20px;font-size:13px;font-weight:500;color:var(--gold);margin-bottom:24px;animation:fadeUp .8s ease both;letter-spacing:1px;text-transform:uppercase}
+.hero-tag .pulse{width:8px;height:8px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hero h1{font-family:'Syne';font-weight:900;font-size:clamp(42px,5.5vw,78px);line-height:1.02;letter-spacing:-3px;margin-bottom:28px;animation:fadeUp .8s .15s ease both}
+.hero h1 .grad{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero h1 .outline{-webkit-text-stroke:1.5px var(--gray2);-webkit-text-fill-color:transparent}
+.hero-desc{font-size:18px;line-height:1.7;color:var(--gray);max-width:540px;margin-bottom:40px;animation:fadeUp .8s .3s ease both}
+.hero-btns{display:flex;gap:16px;animation:fadeUp .8s .45s ease both}
+.hero-visual{position:relative;display:flex;justify-content:center;animation:fadeUp 1s .4s ease both}
+.atm-container{position:relative;width:320px;height:520px}
+.atm-body{width:100%;height:100%;background:linear-gradient(180deg,#1c1c22,#111115);border-radius:24px;border:1px solid rgba(247,147,26,.2);position:relative;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.6),0 0 120px rgba(247,147,26,.08),inset 0 1px 0 rgba(255,255,255,.05)}
+.atm-screen{position:absolute;top:30px;left:24px;right:24px;height:200px;background:linear-gradient(135deg,#0f1923,#0a1018);border-radius:14px;border:1px solid rgba(0,229,160,.15);overflow:hidden}
+.atm-screen::before{content:'₿';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:80px;font-weight:900;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:btcPulse 3s ease infinite}
+@keyframes btcPulse{0%,100%{opacity:.3;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.05)}}
+.atm-screen .scan-line{position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--teal),transparent);animation:scanLine 3s linear infinite}
+@keyframes scanLine{0%{top:-2px}100%{top:100%}}
+.atm-slot{position:absolute;bottom:100px;left:50%;transform:translateX(-50%);width:200px;height:8px;background:#0a0a0c;border-radius:4px;border:1px solid rgba(247,147,26,.2)}
+.atm-slot::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60%;height:2px;background:var(--gold);opacity:.4;border-radius:2px}
+.atm-keypad{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.atm-key{width:36px;height:28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:6px}
+.atm-floating-tag{position:absolute;background:rgba(9,9,11,.85);backdrop-filter:blur(12px);border:1px solid rgba(247,147,26,.2);border-radius:12px;padding:12px 18px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px;animation:float 4s ease-in-out infinite;white-space:nowrap}
+.atm-floating-tag:nth-child(1){top:-10px;right:-80px}
+.atm-floating-tag:nth-child(2){bottom:60px;left:-100px;animation-delay:1.5s}
+.atm-floating-tag:nth-child(3){top:100px;left:-90px;animation-delay:3s}
+.atm-floating-tag .tag-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.atm-floating-tag .tag-dot.green{background:var(--teal)}
+.atm-floating-tag .tag-dot.gold{background:var(--gold)}
+.atm-floating-tag .tag-dot.blue{background:#4ea8ff}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.home-about{background:var(--bg)}
+.home-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:var(--max-w);margin:0 auto}
+.about-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.about-card{background:var(--bg2);border:1px solid rgba(255,255,255,.04);border-radius:16px;padding:28px;transition:all .4s}
+.about-card:hover{border-color:rgba(247,147,26,.2);transform:translateY(-4px)}
+.about-card:nth-child(2){margin-top:40px}
+.about-card:nth-child(3){margin-top:-20px}
+.about-card .ac-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px}
+.about-card:nth-child(1) .ac-icon{background:rgba(247,147,26,.12)}
+.about-card:nth-child(2) .ac-icon{background:rgba(0,229,160,.12)}
+.about-card:nth-child(3) .ac-icon{background:rgba(78,168,255,.12)}
+.about-card:nth-child(4) .ac-icon{background:rgba(255,100,100,.12)}
+.about-card h3{font-weight:700;font-size:16px;margin-bottom:8px}
+.about-card p{font-size:13px;color:var(--gray);line-height:1.6}
+.home-services{background:var(--bg2)}
+.services-grid{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:1024px){
+  .hero{padding:120px 24px 80px}
+  .hero-grid{grid-template-columns:1fr;gap:40px;text-align:center}
+  .hero-desc{margin:0 auto 40px}
+  .hero-btns{justify-content:center}
+  .hero-visual{order:-1}
+  .home-about-grid{grid-template-columns:1fr;gap:40px;text-align:center}
+  .services-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-glow"></div>
+<canvas id="particles"></canvas>
+<div class="grid-overlay"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo"><div class="logo-icon">IL</div><span><em>Imprint</em> Logistics</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="pages/about.html">About</a>
+    <a href="pages/services.html">Services</a>
+    <a href="pages/partners.html">Partners</a>
+    <a href="pages/team.html">Team</a>
+    <a href="pages/faq.html">FAQ</a>
+    <a href="pages/contact.html" class="nav-cta">Contact Us</a>
+  </div>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu">
+  <button class="mobile-close">✕</button>
+  <a href="index.html">Home</a><a href="pages/about.html">About</a><a href="pages/services.html">Services</a><a href="pages/partners.html">Partners</a><a href="pages/team.html">Team</a><a href="pages/faq.html">FAQ</a><a href="pages/contact.html">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-tag"><span class="pulse"></span> Authorized Bitcoin Depot Distributor</div>
+      <h1>Powering the Future of <span class="grad">Bitcoin ATM</span> <span class="outline">Placement</span></h1>
+      <p class="hero-desc">Imprint Logistics LLC partners with the nation's largest BTM operators to secure premium retail locations across North America. Turn your space into a passive revenue stream.</p>
+      <div class="hero-btns">
+        <a href="pages/contact.html" class="btn-primary">Host a Bitcoin ATM</a>
+        <a href="pages/services.html" class="btn-outline">Explore Services →</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="atm-container">
+        <div class="atm-floating-tag"><span class="tag-dot green"></span> 9,000+ Active BTMs</div>
+        <div class="atm-floating-tag"><span class="tag-dot gold"></span> 47 US States</div>
+        <div class="atm-floating-tag"><span class="tag-dot blue"></span> NASDAQ: BTM</div>
+        <div class="atm-body">
+          <div class="atm-screen"><div class="scan-line"></div></div>
+          <div class="atm-slot"></div>
+          <div class="atm-keypad"><div class="atm-key"></div><div class="atm-key"></div><div class="atm-key"></div><div class="atm-key"></div><div class="atm-key"></div><div class="atm-key"></div><div class="atm-key"></div><div class="atm-key"></div><div class="atm-key"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar reveal">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">9,000+</div><div class="stat-label">BTM Locations</div></div>
+    <div class="stat-item"><div class="stat-num">47</div><div class="stat-label">US States</div></div>
+    <div class="stat-item"><div class="stat-num">$7,900</div><div class="stat-label">Max Monthly/BTM</div></div>
+    <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Support</div></div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">Bitcoin ATM Placement <span class="sep">◆</span></span>
+    <span class="marquee-item">Location Acquisition <span class="sep">◆</span></span>
+    <span class="marquee-item">Revenue Generation <span class="sep">◆</span></span>
+    <span class="marquee-item">Retail Partnerships <span class="sep">◆</span></span>
+    <span class="marquee-item">Turnkey Solutions <span class="sep">◆</span></span>
+    <span class="marquee-item">Bitcoin ATM Placement <span class="sep">◆</span></span>
+    <span class="marquee-item">Location Acquisition <span class="sep">◆</span></span>
+    <span class="marquee-item">Revenue Generation <span class="sep">◆</span></span>
+    <span class="marquee-item">Retail Partnerships <span class="sep">◆</span></span>
+    <span class="marquee-item">Turnkey Solutions <span class="sep">◆</span></span>
+  </div>
+</div>
+
+<!-- ABOUT PREVIEW -->
+<section class="home-about">
+  <div class="home-about-grid">
+    <div class="reveal">
+      <div class="section-tag">Who We Are</div>
+      <h2 class="section-title">Bridging Crypto & Physical Retail</h2>
+      <p class="section-desc">Imprint Logistics LLC is a US-registered company specializing in Bitcoin ATM placement and distribution. We represent the industry's top BTM operators — securing premium, high-traffic locations for Bitcoin ATM kiosks nationwide.</p>
+      <br><a href="pages/about.html" class="btn-outline">Learn More →</a>
+    </div>
+    <div class="about-cards reveal">
+      <div class="about-card"><div class="ac-icon">📍</div><h3>Location Scouting</h3><p>Data-driven high-traffic site identification across all 50 states.</p></div>
+      <div class="about-card"><div class="ac-icon">🤝</div><h3>Retailer Onboarding</h3><p>End-to-end negotiation and partnership setup with store owners.</p></div>
+      <div class="about-card"><div class="ac-icon">📊</div><h3>Revenue Analytics</h3><p>Transparent monthly residual income tracking for all partners.</p></div>
+      <div class="about-card"><div class="ac-icon">⚡</div><h3>Rapid Deployment</h3><p>From signed LOA to live machine in under 14 days.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="home-services">
+  <div class="section-center reveal" style="margin-bottom:60px">
+    <div class="section-tag">What We Do</div>
+    <h2 class="section-title">Our Core Services</h2>
+    <p class="section-desc">We handle every step of the Bitcoin ATM lifecycle — from securing your location to generating consistent revenue.</p>
+  </div>
+  <div class="services-grid">
+    <div class="card reveal"><div class="num">01</div><h3>Location Acquisition</h3><p>We identify and negotiate with high-traffic retail locations to place BTMs where customers need them most.</p><div class="arrow">→</div></div>
+    <div class="card reveal"><div class="num">02</div><h3>BTM Distribution</h3><p>Full supply chain management from kiosk ordering and shipping to on-site installation and compliance setup.</p><div class="arrow">→</div></div>
+    <div class="card reveal"><div class="num">03</div><h3>Passive Income</h3><p>Earn up to $7,900/month per placement through our fully turnkey revenue-sharing model.</p><div class="arrow">→</div></div>
+  </div>
+  <div style="text-align:center;margin-top:48px" class="reveal"><a href="pages/services.html" class="btn-primary">View All Services →</a></div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--bg)">
+  <div class="cta-box reveal">
+    <div class="section-tag">Ready to Earn?</div>
+    <h2 class="section-title">Turn Your Space Into a Bitcoin Revenue Stream</h2>
+    <p class="section-desc">Whether you're a retail store owner, gas station operator, or investor — host a Bitcoin ATM and start earning monthly residual income.</p>
+    <a href="pages/contact.html" class="btn-primary">Contact Us Today →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <a href="index.html" class="nav-logo" style="margin-bottom:12px"><div class="logo-icon">IL</div><span><em>Imprint</em> Logistics</span></a>
+      <p>US-registered Bitcoin ATM placement and distribution company. Authorized distributor for Bitcoin Depot, RockItCoin, and Unbank.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <a href="index.html">Home</a><a href="pages/about.html">About</a><a href="pages/services.html">Services</a><a href="pages/faq.html">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="pages/partners.html">Partners</a><a href="pages/team.html">Team</a><a href="pages/contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <p>✉ info@imprintlogistics.com</p>
+      <p style="margin-top:8px">💬 WhatsApp: +1 (XXX) XXX-XXXX</p>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Imprint Logistics LLC. All rights reserved.</p><p>Built with ₿ in the USA</p></div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team — Imprint Logistics LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.team-cards{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.t-card{background:var(--bg2);border:1px solid rgba(255,255,255,.04);border-radius:24px;padding:52px 40px;text-align:center;transition:all .5s;position:relative;overflow:hidden}
+.t-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:24px 24px 0 0}
+.t-card:nth-child(1)::before{background:var(--gradient)}
+.t-card:nth-child(2)::before{background:linear-gradient(135deg,var(--teal),#4ea8ff)}
+.t-card:hover{border-color:rgba(247,147,26,.15);transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.t-avatar{width:100px;height:100px;border-radius:50%;margin:0 auto 24px;display:flex;align-items:center;justify-content:center;font-family:'Syne';font-weight:800;font-size:36px;color:var(--bg)}
+.t-card:nth-child(1) .t-avatar{background:var(--gradient)}
+.t-card:nth-child(2) .t-avatar{background:linear-gradient(135deg,var(--teal),#4ea8ff)}
+.t-card h3{font-family:'Syne';font-weight:700;font-size:24px;margin-bottom:6px}
+.t-card .role{font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:20px}
+.t-card p{font-size:15px;color:var(--gray);line-height:1.7;margin-bottom:24px}
+.t-skills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.t-skills span{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:6px 14px;border-radius:50px;border:1px solid rgba(255,255,255,.08);color:var(--gray);transition:all .3s}
+.t-card:hover .t-skills span{border-color:rgba(247,147,26,.2);color:var(--white)}
+.values-section{background:var(--bg2)}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto}
+.v-card{background:var(--bg);border:1px solid rgba(255,255,255,.04);border-radius:16px;padding:36px;text-align:center;transition:all .4s}
+.v-card:hover{border-color:rgba(247,147,26,.12);transform:translateY(-4px)}
+.v-card .v-icon{font-size:36px;margin-bottom:14px}
+.v-card h3{font-family:'Syne';font-weight:700;font-size:18px;margin-bottom:10px}
+.v-card p{font-size:14px;color:var(--gray);line-height:1.6}
+@media(max-width:768px){.team-cards{grid-template-columns:1fr}.values-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="cursor-dot"></div><div class="cursor-ring"></div><div class="cursor-glow"></div>
+<canvas id="particles"></canvas><div class="grid-overlay"></div>
+<nav>
+  <a href="../index.html" class="nav-logo"><div class="logo-icon">IL</div><span><em>Imprint</em> Logistics</span></a>
+  <div class="nav-links">
+    <a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+    <a href="partners.html">Partners</a><a href="team.html" class="active">Team</a><a href="faq.html">FAQ</a>
+    <a href="contact.html" class="nav-cta">Contact</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu">
+  <button class="mobile-close">✕</button>
+  <a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="partners.html">Partners</a><a href="team.html">Team</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div>
+    <div class="breadcrumb"><a href="../index.html">Home</a> / Team</div>
+    <h1>Meet the <span class="grad">Team</span></h1>
+    <p class="section-desc">A lean, execution-focused leadership team driving Bitcoin ATM expansion across North America and beyond.</p>
+  </div>
+</div>
+
+<section style="background:var(--bg)">
+  <div class="team-cards">
+    <div class="t-card card-hover reveal">
+      <div class="t-avatar">TM</div>
+      <h3>Talha Mahmood</h3>
+      <div class="role">Director of Operations & Sales</div>
+      <p>Leads all sales operations, location acquisition strategy, and partner relationships. Drives day-to-day business execution including outreach, negotiation, and client management across all markets.</p>
+      <div class="t-skills"><span>Sales Strategy</span><span>Location Acquisition</span><span>Partner Relations</span><span>Market Expansion</span><span>Operations</span></div>
+    </div>
+    <div class="t-card card-hover reveal reveal-delay-1">
+      <div class="t-avatar">FA</div>
+      <h3>Furqan Faheem Awan</h3>
+      <div class="role">Founder & Principal</div>
+      <p>US-based founder and owner of Imprint Logistics LLC. Oversees legal structure, banking operations, regulatory compliance, corporate governance, and strategic direction of the company.</p>
+      <div class="t-skills"><span>Legal & Compliance</span><span>Corporate Governance</span><span>Banking</span><span>Strategic Vision</span><span>US Operations</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="section-header reveal"><div class="section-tag">What Drives Us</div><h2 class="section-title">Our Core Values</h2></div>
+  <div class="values-grid">
+    <div class="v-card card-hover reveal"><div class="v-icon">⚡</div><h3>Execution Speed</h3><p>From first contact to live BTM in under 14 days — speed is everything.</p></div>
+    <div class="v-card card-hover reveal reveal-delay-1"><div class="v-icon">🤝</div><h3>Partner First</h3><p>Your success is our success. Transparent terms and long-term relationships.</p></div>
+    <div class="v-card card-hover reveal reveal-delay-2"><div class="v-icon">🛡️</div><h3>Full Compliance</h3><p>Every placement meets the highest regulatory standards. No shortcuts.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="../index.html" class="nav-logo"><div class="logo-icon">IL</div><span><em>Imprint</em> Logistics</span></a><p>US-registered Bitcoin ATM placement and distribution company.</p></div>
+    <div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="team.html">Our Team</a><a href="partners.html">Partners</a><a href="faq.html">FAQ</a></div>
+    <div class="footer-col"><h4>Services</h4><a href="services.html">Location Acquisition</a><a href="services.html">BTM Distribution</a><a href="services.html">Revenue Sharing</a></div>
+    <div class="footer-col"><h4>Contact</h4><a href="mailto:info@imprintlogistics.com">info@imprintlogistics.com</a><a href="https://wa.me/1234567890" target="_blank">WhatsApp</a><a href="contact.html">Contact Form</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Imprint Logistics LLC. All rights reserved.</span><div class="footer-socials"><a href="#">in</a><a href="#">𝕏</a></div></div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Imprint Logistics LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.timeline{max-width:800px;margin:60px auto 0;position:relative;padding-left:40px}
+.timeline::before{content:'';position:absolute;left:16px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold),var(--teal))}
+.tl-item{margin-bottom:40px;position:relative}
+.tl-item::before{content:'';position:absolute;left:-32px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--gold);border:3px solid var(--bg)}
+.tl-item h3{font-family:'Syne';font-weight:700;font-size:18px;margin-bottom:6px}
+.tl-item p{font-size:14px;color:var(--gray);line-height:1.7}
+.tl-item .tl-tag{font-size:12px;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.values-grid{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.about-split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:var(--max-w);margin:0 auto}
+@media(max-width:1024px){.values-grid,.about-split{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="cursor-dot"></div><div class="cursor-ring"></div><div class="cursor-glow"></div>
+<canvas id="particles"></canvas><div class="grid-overlay"></div>
+<nav>
+  <a href="../index.html" class="nav-logo"><div class="logo-icon">IL</div><span><em>Imprint</em> Logistics</span></a>
+  <div class="nav-links"><a href="../index.html">Home</a><a href="about.html" class="active">About</a><a href="services.html">Services</a><a href="partners.html">Partners</a><a href="team.html">Team</a><a href="faq.html">FAQ</a><a href="contact.html" class="nav-cta">Contact Us</a></div>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu"><button class="mobile-close">✕</button><a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="partners.html">Partners</a><a href="team.html">Team</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+
+<div class="page-hero">
+  <div class="section-tag">About Us</div>
+  <h1>Building the Bridge Between <span class="grad">Bitcoin & Retail</span></h1>
+  <p>Imprint Logistics LLC is a US-registered company dedicated to expanding Bitcoin ATM access across North America and beyond.</p>
+</div>
+
+<section style="background:var(--bg);padding-top:40px">
+  <div class="about-split reveal">
+    <div>
+      <div class="section-tag">Our Mission</div>
+      <h2 class="section-title">Making Bitcoin Accessible to Everyone</h2>
+      <p class="section-desc">We connect retail businesses with leading Bitcoin ATM operators, creating a win-win: store owners earn passive income while communities gain easier crypto access.</p>
+      <br><p class="section-desc">Founded by Furqan Faheem Awan and operationally led by Talha Mahmood, we combine deep market knowledge with strong operator relationships to deliver rapid, compliant BTM placements.</p>
+    </div>
+    <div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-tag">Foundation</div><h3>Company Formed</h3><p>Imprint Logistics LLC registered in the United States to scale Bitcoin ATM distribution.</p></div>
+        <div class="tl-item"><div class="tl-tag">Partnerships</div><h3>Operator Agreements</h3><p>Authorized distributors for Bitcoin Depot, RockItCoin, and Unbank.</p></div>
+        <div class="tl-item"><div class="tl-tag">Expansion</div><h3>International Growth</h3><p>Actively expanding into Canada and Brazil with surging crypto adoption.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg2)">
+  <div class="section-center reveal" style="margin-bottom:60px"><div class="section-tag">Our Values</div><h2 class="section-title">What Drives Us</h2></div>
+  <div class="values-grid">
+    <div class="card reveal"><div class="card-icon">🎯</div><h3>Execution Speed</h3><p>From outreach to live BTM in under 14 days. Time is money, and we don't waste either.</p></div>
+    <div class="card reveal"><div class="card-icon teal">🛡️</div><h3>Full Compliance</h3><p>Every placement meets FINCEN, state licensing, and local regulatory requirements.</p></div>
+    <div class="card reveal"><div class="card-icon blue">🤝</div><h3>Partner First</h3><p>We build lasting relationships through transparency and consistent revenue delivery.</p></div>
+  </div>
+</section>
+
+<section style="background:var(--bg)"><div class="cta-box reveal"><div class="section-tag">Join Us</div><h2 class="section-title">Ready to Partner?</h2><p class="section-desc">Whether you have one location or a hundred, we'll find the right BTM solution.</p><a href="contact.html" class="btn-primary">Get in Touch →</a></div></section>
+
+<footer><div class="footer-inner"><div class="footer-col"><a href="../index.html" class="nav-logo" style="margin-bottom:12px"><div class="logo-icon">IL</div><span><em>Imprint</em> Logistics</span></a><p>US-registered Bitcoin ATM placement and distribution.</p></div><div class="footer-col"><h4>Pages</h4><a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="faq.html">FAQ</a></div><div class="footer-col"><h4>Company</h4><a href="partners.html">Partners</a><a href="team.html">Team</a><a href="contact.html">Contact</a></div><div class="footer-col"><h4>Get in Touch</h4><p>✉ info@imprintlogistics.com</p><p style="margin-top:8px">💬 WhatsApp: +1 (XXX) XXX-XXXX</p></div></div><div class="footer-bottom"><p>© 2026 Imprint Logistics LLC.</p><p>Built with ₿ in the USA</p></div></footer>
+<script src="../js/main.js"></script>
+</body></html>
